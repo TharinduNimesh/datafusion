@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
 import { HoverBorderGradient } from "./hover-border-gradient";
+import { Logo } from "./logo";
 import {
   Navbar,
   NavBody,
   NavItems,
-  NavbarLogo,
   MobileNav,
   MobileNavHeader,
   MobileNavMenu,
@@ -25,7 +25,10 @@ export const Header = () => {
     <>
       <Navbar className="mx-auto">
         <NavBody>
-          <NavbarLogo />
+          <div className="relative z-20 flex items-center space-x-2">
+            <Logo className="w-8 h-8 sm:w-10 sm:h-10" />
+            <span className="text-xl sm:text-2xl font-bold text-white">DataFusion</span>
+          </div>
           <NavItems items={items} />
           <div className="relative z-20">
             <HoverBorderGradient>Contact Us</HoverBorderGradient>
@@ -35,7 +38,10 @@ export const Header = () => {
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
-            <NavbarLogo />
+            <div className="flex items-center space-x-2">
+              <Logo className="w-8 h-8" />
+              <span className="text-xl font-bold text-white">DataFusion</span>
+            </div>
             <MobileNavToggle
               isOpen={isOpen}
               onClick={() => setIsOpen(!isOpen)}

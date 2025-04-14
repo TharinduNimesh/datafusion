@@ -10,6 +10,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { SecondaryButton } from "./secondary-button";
+import { Logo } from "./logo";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -51,13 +52,14 @@ export const Footer = () => {
           <div className="grid gap-8 lg:grid-cols-3">
             {/* Company Info */}
             <div className="space-y-6 sm:space-y-8">
-              <div>
+              <div className="flex items-center space-x-3">
+                <Logo className="w-8 h-8 sm:w-10 sm:h-10" />
                 <span className="text-2xl sm:text-3xl font-bold text-white">DataFusion</span>
-                <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-400 max-w-md">
-                  Transform your data into actionable insights with our comprehensive analytics 
-                  and consulting solutions. Empowering businesses through data-driven decisions.
-                </p>
               </div>
+              <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-400 max-w-md">
+                Transform your data into actionable insights with our comprehensive analytics 
+                and consulting solutions. Empowering businesses through data-driven decisions.
+              </p>
               <div className="space-y-3">
                 <a href="mailto:contact@datafusion.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
                   <Mail className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
