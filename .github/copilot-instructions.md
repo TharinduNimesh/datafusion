@@ -1,0 +1,3 @@
+- this is a website that design for a data consulting company called DataFusion
+- we are using tailwindcss and aceternity ui to build this design in a react vite project.
+- use hover-border-gradient button as the primary button
