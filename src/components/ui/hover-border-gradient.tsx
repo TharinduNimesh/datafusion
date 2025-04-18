@@ -1,28 +1,41 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
 type Direction = "TOP" | "LEFT" | "BOTTOM" | "RIGHT";
 
-export function HoverBorderGradient({
-  children,
-  containerClassName,
-  className,
-  as: Tag = "button",
-  duration = 1,
-  clockwise = true,
-  ...props
-}: React.PropsWithChildren<
-  {
-    as?: React.ElementType;
-    containerClassName?: string;
-    className?: string;
-    duration?: number;
-    clockwise?: boolean;
-  } & React.HTMLAttributes<HTMLElement>
->) {
+// Simple props type that works for both button and anchor
+interface HoverBorderGradientBaseProps {
+  children: React.ReactNode;
+  containerClassName?: string;
+  className?: string;
+  duration?: number;
+  clockwise?: boolean;
+  href?: string;
+  onClick?: React.MouseEventHandler;
+}
+
+// Button specific props
+type ButtonProps = HoverBorderGradientBaseProps & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof HoverBorderGradientBaseProps>;
+
+// Anchor specific props
+type AnchorProps = HoverBorderGradientBaseProps & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof HoverBorderGradientBaseProps>;
+
+// The combined type
+type HoverBorderGradientProps = ButtonProps | AnchorProps;
+
+export function HoverBorderGradient(props: HoverBorderGradientProps) {
+  const {
+    children,
+    containerClassName,
+    className,
+    duration = 1,
+    clockwise = true,
+    href,
+    ...rest
+  } = props;
+
   const [hovered, setHovered] = useState<boolean>(false);
   const [direction, setDirection] = useState<Direction>("TOP");
 
@@ -56,16 +69,18 @@ export function HoverBorderGradient({
     }
   }, [hovered, duration]);
 
-  return (
-    <Tag
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className={cn(
-        "relative flex rounded-full border border-white/10 bg-black/20 hover:bg-black/10 transition-all duration-500 dark:bg-white/5 items-center justify-center overflow-visible p-px w-fit cursor-pointer select-none",
-        containerClassName
-      )}
-      {...props}
-    >
+  const commonProps = {
+    onMouseEnter: () => setHovered(true),
+    onMouseLeave: () => setHovered(false),
+    className: cn(
+      "relative flex rounded-full border border-white/10 bg-black/20 hover:bg-black/10 transition-all duration-500 dark:bg-white/5 items-center justify-center overflow-visible p-px w-fit cursor-pointer select-none",
+      containerClassName
+    ),
+    ...rest
+  };
+
+  const content = (
+    <>
       <div
         className={cn(
           "relative text-white z-10 bg-black/80 px-6 py-2.5 rounded-[inherit] whitespace-nowrap font-medium",
@@ -85,9 +100,20 @@ export function HoverBorderGradient({
             ? [movingMap[direction], highlight]
             : movingMap[direction],
         }}
-        transition={{ ease: "linear", duration: duration ?? 1 }}
+        transition={{ ease: "linear", duration: duration }}
       />
       <div className="bg-black/90 absolute z-[1] inset-[2px] rounded-[inherit]" />
-    </Tag>
+    </>
+  );
+
+  // Render either a button or an anchor based on whether href is provided
+  return href ? (
+    <a href={href} {...commonProps as React.AnchorHTMLAttributes<HTMLAnchorElement>}>
+      {content}
+    </a>
+  ) : (
+    <button type="button" {...commonProps as React.ButtonHTMLAttributes<HTMLButtonElement>}>
+      {content}
+    </button>
   );
 }
