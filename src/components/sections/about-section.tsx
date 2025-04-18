@@ -29,8 +29,8 @@ export const AboutSection = () => {
             <GradientBadge className="mb-4">
               About DataFusion
             </GradientBadge>
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold pb-4 bg-clip-text text-transparent bg-gradient-to-b from-blue-100 to-blue-500 mb-6">
-              Transforming Data into Business Success
+            <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+              Data Excellence, Delivered
             </h3>
             <div className="space-y-6 text-gray-400">
               <p>

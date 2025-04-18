@@ -19,7 +19,7 @@ export function ServicesSection() {
           <GradientBadge className="mb-4">
             What We Offer
           </GradientBadge>
-          <h2 className="text-4xl md:text-5xl font-bold pb-4 bg-clip-text text-transparent bg-gradient-to-b from-blue-200 to-blue-600">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             Our Services
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">

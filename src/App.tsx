@@ -6,6 +6,9 @@ import { Header } from "@/components/ui/header";
 import { ServicesSection } from "@/components/sections/services-section";
 import { Footer } from "@/components/ui/footer";
 import { AboutSection } from "@/components/sections/about-section";
+import { TrustedPartners } from "@/components/sections/trusted-partners";
+import { WhyChooseSection } from "@/components/sections/why-choose-section";
+import { CallToActionSection } from "@/components/sections/call-to-action-section";
 
 export default function App() {
   const ref = React.useRef(null);
@@ -44,7 +47,10 @@ export default function App() {
         </div>
       </div>
       <AboutSection />
+      <TrustedPartners />
       <ServicesSection />
+      <WhyChooseSection />
+      <CallToActionSection />
       <Footer />
     </main>
   );

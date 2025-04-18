@@ -22,10 +22,10 @@ export const GoogleGeminiEffect = ({
   return (
     <div className={cn("sticky top-80", className)}>
       <div className="relative z-10 flex flex-col items-center max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold pb-2 sm:pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-blue-100 to-blue-500">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold pb-2 sm:pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           {title}
         </h2>
-        <p className="text-base sm:text-lg md:text-xl text-center text-gray-400 mt-4 sm:mt-6 max-w-2xl">
+        <p className="text-base sm:text-lg text-center text-gray-400 mt-4 sm:mt-6 max-w-2xl">
           {description}
         </p>
         <div className="mt-4 sm:mt-6 md:mt-8 lg:mt-12">
