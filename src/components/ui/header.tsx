@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { HoverBorderGradient } from "./hover-border-gradient";
 import { Logo } from "./logo";
 import {
@@ -16,22 +17,29 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const items = [
-    { name: "Services", link: "#services" },
-    { name: "About", link: "#about" },
-    { name: "Case Studies", link: "#case-studies" },
+    { name: "About Us", link: "/about" },
+    { name: "Services", link: "/services" },
+    { name: "Case Studies", link: "/case-studies" },
   ];
 
   return (
     <>
       <Navbar className="mx-auto">
         <NavBody>
-          <div className="relative z-20 flex items-center space-x-2">
+          <Link to={"/"} className="relative z-20 flex items-center space-x-2">
             <Logo className="w-8 h-8 sm:w-10 sm:h-10" />
             <span className="text-xl sm:text-2xl font-bold text-white">DataFusion</span>
-          </div>
-          <NavItems items={items} />
+          </Link>
+          <NavItems
+            items={items.map((item) => ({
+              ...item,
+              element: <Link to={item.link}>{item.name}</Link>,
+            }))}
+          />
           <div className="relative z-20">
-            <HoverBorderGradient>Contact Us</HoverBorderGradient>
+            <Link to="/contact">
+              <HoverBorderGradient>Contact Us</HoverBorderGradient>
+            </Link>
           </div>
         </NavBody>
 
@@ -49,18 +57,20 @@ export const Header = () => {
           </MobileNavHeader>
           <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)}>
             {items.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.link}
+                to={item.link}
                 onClick={() => setIsOpen(false)}
                 className="w-full rounded-lg px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-neutral-900"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
-            <HoverBorderGradient className="w-full">
-              Contact Us
-            </HoverBorderGradient>
+            <Link to="/contact" className="w-full" onClick={() => setIsOpen(false)}>
+              <HoverBorderGradient className="w-full">
+                Contact Us
+              </HoverBorderGradient>
+            </Link>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>

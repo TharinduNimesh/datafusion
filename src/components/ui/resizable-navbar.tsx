@@ -9,6 +9,7 @@ import {
 } from "motion/react";
 import React, { useRef, useState } from "react";
 import { HoverBorderGradient } from "./hover-border-gradient";
+import { Link } from "react-router-dom";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -123,12 +124,12 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
       )}
     >
       {items.map((item, idx) => (
-        <a
+        <Link
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
           className="relative px-4 py-2 transition-colors duration-300 hover:text-white"
           key={`link-${idx}`}
-          href={item.link}
+          to={item.link}
         >
           {hovered === idx && (
             <motion.div
@@ -140,7 +141,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             />
           )}
           <span className="relative z-20">{item.name}</span>
-        </a>
+        </Link>
       ))}
     </div>
   );
