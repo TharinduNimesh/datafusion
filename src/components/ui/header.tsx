@@ -17,9 +17,9 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const items = [
+    { name: "Home", link: "/" },
     { name: "About Us", link: "/about" },
     { name: "Services", link: "/services" },
-    { name: "Case Studies", link: "/case-studies" },
   ];
 
   return (

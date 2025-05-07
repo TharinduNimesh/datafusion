@@ -134,9 +134,7 @@ print(f"Growth Rate: {business_insights['growth_rate']:.1f}%")`;
               Why Choose DataFusion?
             </h2>
             <p className="text-gray-400 mb-8">
-              With years of experience across industries, our data consultants bring both technical
-              expertise and business acumen to every project. We don't just analyze data – we deliver
-              actionable insights that create real business value.
+              DataFusion stands apart with deep technical expertise, a proven track record, and a relentless focus on business outcomes. We deliver tailored solutions, end-to-end support, and ongoing optimization—so your data drives real results.
             </p>
             <ul className="space-y-4">
               {features.map((feature, index) => (

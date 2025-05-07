@@ -138,7 +138,7 @@ const Contact = () => {
       </section>
 
       {/* Google Map Section */}
-      <section className="w-full flex justify-center bg-black py-12">
+      {/* <section className="w-full flex justify-center bg-black py-12">
         <div className="w-full max-w-6xl rounded-2xl border border-white/10 overflow-hidden shadow-lg min-h-[240px]">
           <iframe
             title="DataFusion Location"
@@ -151,7 +151,7 @@ const Contact = () => {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 };

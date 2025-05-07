@@ -17,8 +17,7 @@ export const TestimonialsSection = () => {
             What Our Clients Say
           </h2>
           <p className="text-gray-400 mt-6">
-            Hear directly from the organizations that have transformed their data strategies with 
-            DataFusion's expert consulting and analytics solutions.
+            Hear directly from organizations that have unlocked new value, reduced costs, and accelerated growth with DataFusion's data engineering, analytics, and AI solutions.
           </p>
         </div>
 

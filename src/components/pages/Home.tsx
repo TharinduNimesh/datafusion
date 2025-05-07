@@ -2,10 +2,10 @@ import { useRef } from "react";
 import { useScroll, useTransform } from "motion/react";
 import { GoogleGeminiEffect } from "@/components/ui/google-gemini-effect";
 import { AboutSection } from "@/components/sections/about-section";
-import { TrustedPartners } from "@/components/sections/trusted-partners";
+// import { TrustedPartners } from "@/components/sections/trusted-partners";
 import { ServicesSection } from "@/components/sections/services-section";
 import { WhyChooseSection } from "@/components/sections/why-choose-section";
-import { TestimonialsSection } from "@/components/sections/testimonials-section";
+// import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { CallToActionSection } from "@/components/sections/call-to-action-section";
 
 const Home = () => {
@@ -35,10 +35,10 @@ const Home = () => {
         </div>
       </div>
       <AboutSection />
-      <TrustedPartners />
+      {/* <TrustedPartners /> */}
       <ServicesSection />
       <WhyChooseSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <CallToActionSection />
     </main>
   );

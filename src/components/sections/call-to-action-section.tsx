@@ -44,8 +44,7 @@ export const CallToActionSection = () => {
               Ready to Transform Your Data Journey?
             </h2>
             <p className="text-zinc-200 text-lg mt-6 mb-16 max-w-2xl font-light">
-              Join hundreds of businesses that have already unlocked the power
-              of their data with DataFusion's expert consulting services.
+              Ready to unlock the power of your data? Join leading organizations who trust DataFusion to deliver results—faster insights, smarter decisions, and measurable business impact.
             </p>
 
             {/* Simple Stats Section */}

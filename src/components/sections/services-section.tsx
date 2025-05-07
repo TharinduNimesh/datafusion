@@ -8,7 +8,7 @@ import {
   CloudCog,
 } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
-import { SecondaryButton } from "../ui/secondary-button";
+import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { GradientBadge } from "../ui/gradient-badge";
 
 export function ServicesSection() {
@@ -23,7 +23,7 @@ export function ServicesSection() {
             Our Services
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Transform your business with our comprehensive data solutions
+            DataFusion delivers a unified data intelligence platform—combining data engineering, analytics, AI/ML, predictive modeling, and cloud solutions. We help you transform raw data into actionable insights and business value.
           </p>
         </div>
         <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
@@ -31,41 +31,37 @@ export function ServicesSection() {
             area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
             icon={<Database className="h-4 w-4 text-blue-400" />}
             title="Data Engineering"
-            description="Build robust data pipelines and infrastructure for seamless data processing and storage."
+            description="Build robust pipelines and infrastructure for seamless, high-quality data processing."
           />
-
           <GridItem
             area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
             icon={<BarChart3 className="h-4 w-4 text-blue-400" />}
             title="Business Analytics"
-            description="Transform raw data into actionable insights with advanced analytics and visualization."
+            description="Empower decision-makers with interactive dashboards and actionable insights."
           />
-
           <GridItem
             area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
             icon={<Brain className="h-4 w-4 text-blue-400" />}
             title="AI & Machine Learning"
-            description="Leverage cutting-edge AI technologies to predict trends and automate decision-making processes."
+            description="Deploy custom AI/ML models for automation, prediction, and intelligent operations."
           />
-
           <GridItem
             area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
             icon={<LineChart className="h-4 w-4 text-blue-400" />}
             title="Predictive Analytics"
-            description="Stay ahead of market trends with our advanced predictive modeling solutions."
+            description="Anticipate trends and reduce risk with advanced predictive modeling."
           />
-
           <GridItem
             area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
             icon={<CloudCog className="h-4 w-4 text-blue-400" />}
             title="Cloud Data Solutions"
-            description="Scalable and secure cloud infrastructure designed for your data needs."
+            description="Scale effortlessly with secure, cloud-native infrastructure and serverless analytics."
           />
         </ul>
         <div className="text-center mt-12">
-          <SecondaryButton>
+          <HoverBorderGradient>
             Explore Our Services
-          </SecondaryButton>
+          </HoverBorderGradient>
         </div>
       </div>
     </section>

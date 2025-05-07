@@ -34,15 +34,10 @@ export const AboutSection = () => {
             </h3>
             <div className="space-y-6 text-gray-400">
               <p>
-                At DataFusion, we specialize in transforming complex data into
-                actionable insights that drive business growth. With years of
-                expertise in data analytics and consulting, we help
-                organizations harness the power of their data.
+                DataFusion seamlessly integrates robust data engineering, intuitive analytics, AI/ML, predictive insights, and scalable cloud infrastructure—empowering organizations to turn raw data into strategic advantage with speed and accuracy.
               </p>
               <p>
-                Our team of expert data scientists and engineers work closely
-                with clients to develop customized solutions that address their
-                unique challenges and opportunities.
+                Our mission is to help you unlock the full value of your data. With a team of certified experts, we deliver tailored solutions that drive growth, innovation, and operational excellence.
               </p>
               <div className="grid grid-cols-2 gap-6 mt-8">
                 <div className="space-y-2">
