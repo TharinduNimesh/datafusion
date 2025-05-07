@@ -10,7 +10,7 @@ const About = () => {
       {/* Hero Section (same as Contact) */}
       <section className="w-full flex items-center justify-center h-[40vh] relative border-b border-white/10">
         <img
-          src="/company.jpg"
+          src="/about-us-hero.jpeg"
           alt="About DataFusion Hero"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
         />
@@ -32,13 +32,16 @@ const About = () => {
         <div className="h-1 w-full rounded bg-gradient-to-r from-zinc-700/0 via-zinc-400/60 to-zinc-700/0 mb-10" />
         <div className="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
           {/* Icon/Illustration */}
-          <div className="flex-shrink-0 flex items-center justify-center w-full md:w-1/3 mb-8 md:mb-0">
-            <img
-              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+            <div className="flex-shrink-0 flex items-center justify-center w-full md:w-1/3 mb-8 md:mb-0">
+            <div className="relative">
+              <img
+              src="/data-analytics.jpg"
               alt="Vision and Mission"
               className="w-full max-w-xs rounded-2xl shadow-lg object-cover"
-            />
-          </div>
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent rounded-2xl" />
+            </div>
+            </div>
           {/* Content */}
           <div className="flex-1 flex flex-col gap-6">
             <div className="inline-block relative mb-2 w-fit">
