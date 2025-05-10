@@ -1,29 +1,25 @@
 "use client";
 
-import {
-  Database,
-  BarChart3,
-  Brain,
-  LineChart,
-  CloudCog,
-} from "lucide-react";
+import { Database, BarChart3, Brain, LineChart, CloudCog } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { GradientBadge } from "../ui/gradient-badge";
+import { Link } from "react-router-dom";
 
 export function ServicesSection() {
   return (
     <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <GradientBadge className="mb-4">
-            What We Offer
-          </GradientBadge>
+          <GradientBadge className="mb-4">What We Offer</GradientBadge>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             Our Services
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            DataFusion delivers a unified data intelligence platform—combining data engineering, analytics, AI/ML, predictive modeling, and cloud solutions. We help you transform raw data into actionable insights and business value.
+            DataFusion delivers a unified data intelligence platform—combining
+            data engineering, analytics, AI/ML, predictive modeling, and cloud
+            solutions. We help you transform raw data into actionable insights
+            and business value.
           </p>
         </div>
         <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
@@ -59,9 +55,9 @@ export function ServicesSection() {
           />
         </ul>
         <div className="text-center mt-12">
-          <HoverBorderGradient>
-            Explore Our Services
-          </HoverBorderGradient>
+          <Link to="/services">
+            <HoverBorderGradient>Explore Our Services</HoverBorderGradient>
+          </Link>
         </div>
       </div>
     </section>

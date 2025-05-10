@@ -11,24 +11,25 @@ import {
 } from "lucide-react";
 import { SecondaryButton } from "./secondary-button";
 import { Logo } from "./logo";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: "About Us", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Case Studies", href: "#case-studies" },
-    { name: "Blog", href: "#blog" },
-    { name: "Contact", href: "#contact" },
+    { name: "About Us", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Products", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const services = [
-    { name: "Data Engineering", href: "#data-engineering" },
-    { name: "Business Analytics", href: "#business-analytics" },
-    { name: "AI & Machine Learning", href: "#ai-ml" },
-    { name: "Predictive Analytics", href: "#predictive-analytics" },
-    { name: "Cloud Data Solutions", href: "#cloud-solutions" },
+    { name: "Data Engineering", href: "/services#data-engineering" },
+    { name: "Business Analytics", href: "/services#business-analytics" },
+    { name: "AI & Machine Learning", href: "/services#ai-ml" },
+    { name: "Predictive Analytics", href: "/services#predictive-analytics" },
+    { name: "Cloud Data Solutions", href: "/services#cloud-solutions" },
   ];
 
   const socialLinks = [
@@ -84,12 +85,12 @@ export const Footer = () => {
                   <ul role="list" className="space-y-3 sm:space-y-4">
                     {quickLinks.map((link) => (
                       <li key={link.name}>
-                        <a
-                          href={link.href}
+                        <Link
+                          to={link.href}
                           className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors duration-200"
                         >
                           {link.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -99,12 +100,12 @@ export const Footer = () => {
                   <ul role="list" className="space-y-3 sm:space-y-4">
                     {services.map((service) => (
                       <li key={service.name}>
-                        <a
-                          href={service.href}
+                        <Link
+                          to={service.href}
                           className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors duration-200"
                         >
                           {service.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -161,7 +162,7 @@ export const Footer = () => {
                 <span className="hidden sm:inline">•</span>
                 <a href="#" className="hover:text-white transition-colors whitespace-nowrap">Terms of Service</a>
                 <span className="hidden sm:inline">•</span>
-                <span className="whitespace-nowrap">Designed & Developed by <a href="https://github.com/TharinduNimesh" className="text-blue-400 hover:text-blue-300 transition-colors">Tharindu Nimesh</a></span>
+                <span className="whitespace-nowrap">Designed & Developed by <a href="https://eversoft.lk" className="text-blue-400 hover:text-blue-300 transition-colors">Eversoft</a></span>
               </div>
             </div>
           </div>

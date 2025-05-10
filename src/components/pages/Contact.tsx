@@ -16,7 +16,7 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="w-full flex items-center justify-center h-[40vh] relative border-b border-white/10">
         <img
-          src="/contact-bg.png"
+          src="/contact-bg.jpg"
           alt="DataFusion Contact Hero"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
         />
@@ -39,7 +39,7 @@ const Contact = () => {
             {/* Top image for visual balance */}
             <div className="relative w-full mb-6">
               <img
-                src="/contact-info.png"
+                src="/contact-info.jpg"
                 alt="Contact Info Visual"
                 className="w-full object-contain rounded-xl shadow-lg"
               />

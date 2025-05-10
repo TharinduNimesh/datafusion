@@ -21,7 +21,7 @@ export const SecondaryButton = ({
       {...props}
     >
       {/* Main button */}
-      <div className="w-full relative px-6 py-2.5 rounded-full bg-white text-black font-medium border border-white/10 hover:bg-white/90 transition-colors duration-300">
+      <div className="w-full relative px-6 py-2.5 rounded-full bg-white text-black font-medium border border-white/10 hover:bg-white/90 transition-colors duration-300 cursor-pointer">
         {children}
       </div>
       

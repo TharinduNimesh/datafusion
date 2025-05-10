@@ -1,5 +1,6 @@
 import { CallToActionSection } from "../sections/call-to-action-section";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
+import { Link } from "react-router-dom";
 
 const serviceSections = [
   {
@@ -119,6 +120,7 @@ const Services = () => {
       {serviceSections.map((service, idx) => (
         <section
           key={service.id}
+          id={service.id}
           className="w-full py-20 px-4 border-b border-white/10 bg-black"
         >
           <div className={`max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
@@ -146,11 +148,11 @@ const Services = () => {
                 ))}
               </ul>
               <div>
-                <a href={service.cta.href}>
+                <Link to={service.cta.href}>
                   <HoverBorderGradient>
                     {service.cta.label}
                   </HoverBorderGradient>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

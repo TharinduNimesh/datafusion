@@ -2,6 +2,7 @@
 
 import { SecondaryButton } from "../ui/secondary-button";
 import { GradientBadge } from "../ui/gradient-badge";
+import { Link } from "react-router-dom";
 
 export const AboutSection = () => {
   return (
@@ -26,27 +27,30 @@ export const AboutSection = () => {
 
           {/* Content Column */}
           <div className="w-full lg:w-1/2">
-            <GradientBadge className="mb-4">
-              About DataFusion
-            </GradientBadge>
+            <GradientBadge className="mb-4">About DataFusion</GradientBadge>
             <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
               Data Excellence, Delivered
             </h3>
             <div className="space-y-6 text-gray-400">
               <p>
-                DataFusion seamlessly integrates robust data engineering, intuitive analytics, AI/ML, predictive insights, and scalable cloud infrastructure—empowering organizations to turn raw data into strategic advantage with speed and accuracy.
+                DataFusion seamlessly integrates robust data engineering,
+                intuitive analytics, AI/ML, predictive insights, and scalable
+                cloud infrastructure—empowering organizations to turn raw data
+                into strategic advantage with speed and accuracy.
               </p>
               <p>
-                Our mission is to help you unlock the full value of your data. With a team of certified experts, we deliver tailored solutions that drive growth, innovation, and operational excellence.
+                Our mission is to help you unlock the full value of your data.
+                With a team of certified experts, we deliver tailored solutions
+                that drive growth, innovation, and operational excellence.
               </p>
               <div className="grid grid-cols-2 gap-6 mt-8">
                 <div className="space-y-2">
-                  <div className="text-3xl font-bold text-white">150+</div>
-                  <div className="text-sm">Successful Projects</div>
+                  <div className="text-3xl font-bold text-white">20+</div>
+                  <div className="text-sm">Years of Experience</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-3xl font-bold text-white">50+</div>
-                  <div className="text-sm">Expert Team Members</div>
+                  <div className="text-3xl font-bold text-white">15+</div>
+                  <div className="text-sm">Expert Consultants</div>
                 </div>
                 <div className="space-y-2">
                   <div className="text-3xl font-bold text-white">98%</div>
@@ -59,9 +63,9 @@ export const AboutSection = () => {
               </div>
             </div>
             <div className="mt-8">
-              <SecondaryButton>
-                Learn More About Us
-              </SecondaryButton>
+              <Link to="/about">
+                <SecondaryButton>Learn More About Us</SecondaryButton>
+              </Link>
             </div>
           </div>
         </div>

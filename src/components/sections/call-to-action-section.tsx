@@ -1,5 +1,6 @@
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { GradientBadge } from "../ui/gradient-badge";
+import { Link } from "react-router-dom";
 
 export const CallToActionSection = () => {
   const stats = [
@@ -8,12 +9,12 @@ export const CallToActionSection = () => {
       label: "Client Satisfaction",
     },
     {
-      value: "500+",
-      label: "Projects Completed",
+      value: "20+",
+      label: "Years of Experience",
     },
     {
-      value: "50+",
-      label: "Data Scientists",
+      value: "15+",
+      label: "Expert Consultants",
     },
     {
       value: "24/7",
@@ -37,22 +38,22 @@ export const CallToActionSection = () => {
         {/* Content Container */}
         <div className="relative z-10 container mx-auto px-4 py-24">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-            <GradientBadge className="mb-4">
-              Get Started
-            </GradientBadge>
+            <GradientBadge className="mb-4">Get Started</GradientBadge>
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
               Ready to Transform Your Data Journey?
             </h2>
             <p className="text-zinc-200 text-lg mt-6 mb-16 max-w-2xl font-light">
-              Ready to unlock the power of your data? Join leading organizations who trust DataFusion to deliver results—faster insights, smarter decisions, and measurable business impact.
+              Ready to unlock the power of your data? Join leading organizations
+              who trust DataFusion to deliver results—faster insights, smarter
+              decisions, and measurable business impact.
             </p>
 
             {/* Simple Stats Section */}
             <div className="w-full max-w-4xl mx-auto mb-16">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
                 {stats.map((stat, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="border-l-2 border-zinc-500 pl-6 text-left"
                   >
                     <div className="space-y-1">
@@ -70,13 +71,15 @@ export const CallToActionSection = () => {
 
             {/* CTA Button */}
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <HoverBorderGradient
-                className="text-lg px-8 py-3 text-white bg-zinc-900/50 backdrop-blur-sm"
-                duration={1.5}
-                clockwise={false}
-              >
-                Schedule a Free Consultation
-              </HoverBorderGradient>
+              <Link to="/contact">
+                <HoverBorderGradient
+                  className="text-lg px-8 py-3 text-white bg-zinc-900/50 backdrop-blur-sm"
+                  duration={1.5}
+                  clockwise={false}
+                >
+                  Schedule a Free Consultation
+                </HoverBorderGradient>
+              </Link>
             </div>
           </div>
         </div>
