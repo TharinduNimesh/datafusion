@@ -76,7 +76,7 @@ const serviceSections = [
     imgAlt: "Predictive analytics illustration",
   },
   {
-    id: "cloud-data-solutions",
+    id: "cloud-solutions",
     title: "Cloud Data Solutions",
     subtitle: "Cloud-Powered Intelligence",
     description: (
