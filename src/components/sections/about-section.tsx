@@ -15,7 +15,7 @@ export const AboutSection = () => {
               {/* Image Container */}
               <div className="relative">
                 <img
-                  src="company.jpg"
+                  src="about-us.png"
                   alt="Data Analytics Team"
                   className="w-full h-[630px] rounded-2xl object-cover"
                 />
