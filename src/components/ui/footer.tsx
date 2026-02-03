@@ -34,6 +34,7 @@ export const Footer = () => {
 
   const products = [
     { name: "APIForge", href: "https://apiforge.datafuzion.cloud" },
+    { name: "APIBuilder", href: "https://apibuilder.datafuzion.cloud" },
   ];
 
   const socialLinks = [
