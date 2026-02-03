@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const transition = {
   duration: 0,
-  ease: "linear",
+  ease: "linear" as const,
 };
 
 export const GoogleGeminiEffect = ({
