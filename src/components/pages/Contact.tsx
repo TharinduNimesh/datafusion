@@ -22,7 +22,7 @@ const Contact = () => {
         />
         <div className="absolute inset-0 bg-black/70 z-10" />
         <div className="relative z-20 text-center px-4">
-          <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-50 to-neutral-400 bg-opacity-50 mb-4">
             Contact Us
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
@@ -43,7 +43,7 @@ const Contact = () => {
                 alt="Contact Info Visual"
                 className="w-full object-contain rounded-xl shadow-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-black/60 to-transparent rounded-xl" />
+              <div className="absolute inset-0 bg-linear-to-tr from-black/60 to-transparent rounded-xl" />
             </div>
             <div className="w-full space-y-4">
               {/* Address Card */}
@@ -58,8 +58,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium text-white">Address</p>
-                  <p className="text-gray-400 text-sm">123 Data Avenue, Analytics District</p>
-                  <p className="text-gray-400 text-sm">Tech City, 10011</p>
+                  <p className="text-gray-400 text-sm">Kochi, India</p>
                 </div>
               </div>
               {/* Email Card */}
@@ -73,7 +72,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium text-white">Email</p>
-                  <p className="text-gray-400 text-sm">contact@datafusion.com</p>
+                  <p className="text-gray-400 text-sm">datafusion@zohomail.com</p>
                 </div>
               </div>
               {/* Phone Card */}
@@ -87,7 +86,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium text-white">Phone</p>
-                  <p className="text-gray-400 text-sm">+1 (555) 123-4567</p>
+                  <p className="text-gray-400 text-sm">+91 79945 76991 — WhatsApp</p>
                 </div>
               </div>
             </div>
@@ -95,7 +94,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="flex-1 bg-black rounded-2xl border border-white/10 p-8 shadow-lg flex flex-col justify-center">
-            <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 mb-2">
+            <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-50 to-neutral-400 bg-opacity-50 mb-2">
               Get in Touch
             </h2>
             <p className="text-gray-400 mb-6 text-base md:text-lg">

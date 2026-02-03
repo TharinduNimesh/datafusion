@@ -48,8 +48,8 @@ export const Footer = () => {
       <footer className="relative mx-auto w-[95%] max-w-7xl rounded-3xl">
         {/* Gradient Border Container */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-gray-500/50 via-gray-600/25 to-gray-700/5" />
-          <div className="absolute inset-[1px] rounded-3xl bg-black" />
+          <div className="absolute inset-0 rounded-3xl bg-linear-to-b from-gray-500/50 via-gray-600/25 to-gray-700/5" />
+          <div className="absolute inset-px rounded-3xl bg-black" />
         </div>
 
         {/* Content */}
@@ -67,22 +67,22 @@ export const Footer = () => {
               </p>
               <div className="space-y-3">
                 <a
-                  href="mailto:contact@datafusion.com"
+                  href="mailto:datafusion@zohomail.com"
                   className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
                 >
-                  <Mail className="h-4 w-4 flex-shrink-0" />
-                  <span className="text-sm">contact@datafusion.com</span>
+                  <Mail className="h-4 w-4 shrink-0" />
+                  <span className="text-sm">datafusion@zohomail.com</span>
                 </a>
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+917994576991"
                   className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
                 >
-                  <PhoneCall className="h-4 w-4 flex-shrink-0" />
-                  <span className="text-sm">+1 (555) 123-4567</span>
+                  <PhoneCall className="h-4 w-4 shrink-0" />
+                  <span className="text-sm">+91 79945 76991 — WhatsApp</span>
                 </a>
                 <div className="flex items-center gap-3 text-gray-400">
-                  <MapPin className="h-4 w-4 flex-shrink-0" />
-                  <span className="text-sm">123 Data Street, Analytics City, 10011</span>
+                  <MapPin className="h-4 w-4 shrink-0" />
+                  <span className="text-sm">Kochi, India</span>
                 </div>
               </div>
             </div>
